@@ -1,0 +1,646 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  background-image: url('consecionario-autos.jpg');
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* La imagen se queda fija cuando haces scroll */
+  
+}
+html{
+  scroll-behavior: smooth;
+  
+}
+/* Estilos del header y nav */
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    width: 100%;
+  }
+
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    padding-right: 80px;
+    height: 65px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed; /* Navegador fijo */
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    left: 0; /* Alinea a la izquierda */
+    right: 0; /* Alinea a la derecha */
+    z-index: 1000; /* Asegura que el nav esté encima de otros elementos */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.inicio{
+  background-color: #ff6600;
+}
+
+/* Efecto hover */
+a:hover {
+    background-color: #ff6600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by AKAspidey01 // ESTILOS PARA EL BOTON DE 3 BARRAS SACADO DE UIVERSE.IO */ 
+.checkboxtoggler {
+    width: 3em;
+    display: none;
+    flex-direction: column;
+    gap: 0.7em;
+    cursor: pointer;
+  }
+  .line-1 {
+    background: #fff;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+  }
+  .line-2 {
+    background: #fff;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+  }
+   .line-3 {
+    background: #fff;
+    height: 0.3em;
+    border-radius: 10em;
+    transition-duration: 500ms;
+  }
+  #toggleChecker {
+    height: 3em;
+    width: 100%;
+    display: none;
+  }
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+    -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+    transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  }
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+    -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+    transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+  }
+  #toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+/*seccion de inicio*/
+  .hero {
+    text-align: center;
+    height: 100vh;
+    color: white;
+    padding: 150px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Caja semitransparente */
+}
+.hero p{
+  font-size: 24px;
+  padding-top: 20px;
+}
+.hero h1{
+  border-bottom: 1px solid white;
+ margin: 0 100px 0 100px;
+}
+
+.cta-button {
+    background-color: #ff6600;
+    color: white;
+    position: relative;
+    top: 40px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #cc5200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*seccion de vehiculos*/
+.vehiculos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 35px;
+}
+/*Para centrar el titulo del catalogo de los autos*/
+#catalogo h2{
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  padding-top: 50px;
+}
+#catalogo{
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.vehiculo {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(33.333% - 40px);
+}
+.vehiculo h3,p{
+  color:#fff;
+}
+
+.vehiculo img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.detalles-button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.detalles-button:hover {
+  background-color: #bb4e05;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*catalogo de los autos pero responsive*/
+.carousel-autos {
+  width: 100%;
+  
+  margin: 0px auto;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+.carousel-autos h2{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.carousel__container-autos {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__item-autos {
+  min-width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.carousel__item-autos p, h3{
+  color: #fff;
+  margin: 15px 0;
+}
+
+
+.carousel__item-autos img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.carousel__controls-autos {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel__button-autos {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel__button-autos:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Seccion de nuestros servicios*/
+/* From Uiverse.io by vamsidevendrakumar */ 
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 50px 25px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+.card-front i{
+  background-color: #ff6600;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.card-back {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
+.card-container{
+  display: flex;
+  flex-direction: row;/*que las cartas esten uno al lado de otro*/
+  justify-content: center;/*centra las cajas en el medio de la pantalla*/
+}
+/*Para centrar el titulo de la seccion de los servicios*/
+#card-father h2{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding-top: 50px;
+}
+
+#card-father{
+  background: rgba(0, 0, 0, 0.5); /* Caja semitransparente */
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+.card-back h2{
+  font-size: 20px;
+  margin-top:-25px;
+  border-bottom: 1px solid white;
+}
+.card-back p {
+  font-size: 16px;
+  margin-top: 10px; /* Ajusta el espacio entre el h2 y el párrafo */
+  text-align: center;
+  color: #fff; /* Color del texto */
+  padding: 0 20px; /* Espacio a los lados para que no se pegue al borde */
+}
+
+
+
+
+
+
+
+
+
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contacto input, #contacto textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+
+}
+
+#contacto button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contacto button:hover {
+  background-color: #bb4e05;
+}
+#contacto h2{
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+}
+#contacto{
+  background: rgba(0, 0, 0, 0.5); /* Caja semitransparente */
+  padding-bottom: 25px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.966); /* Caja semitransparente */
+  color: white;
+}
+footer p{
+text-align: center;
+}
+.container-icon{
+  display: flex;
+  justify-content: center;
+}
+
+/* From Uiverse.io by ubaidi10 */ 
+ .footer-icon {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  padding: 25px 25px;
+  gap: 20px;
+  margin-top: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  
+  
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.8s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #25d366;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  border-radius: 15px;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.8s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.7s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Estilos para la versión responsive */
+@media (max-width: 758px) {
+    .checkboxtoggler{
+        display:flex;
+    }
+    #catalogo{
+      display: none;
+    }
+    
+.carousel-autos{
+  display: block;
+}
+    ul {
+        position: fixed;
+        display: flex;
+        top: 65px; /* Deja espacio para el header */
+        left: -100%;
+        width: 100%;
+        height:100vh; /* Ocupa todo el alto menos el espacio del header */
+        background: rgba(0, 0, 0, 0.829);
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 20px;
+        transition: left 0.3s ease;
+        z-index: 33333;
+        
+    }
+
+    ul li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    nav {
+        
+        padding-left: 20px;
+        justify-content: space-between; /*hace que el boton se encuentre en la parte derecha del nav*/
+        
+    }
+
+    /* Cuando el checkbox está marcado, el menú se muestra */
+    #toggleChecker:checked + .togglerLable + ul {
+        left: 0;
+    }
+    .card-container{
+      flex-direction: column;
+    }
+    .card{
+      margin: 20px auto ;
+    }
+}
+
